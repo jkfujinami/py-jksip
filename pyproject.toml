@@ -1,0 +1,24 @@
+[project]
+name = "py-jksip"
+version = "0.1.0"
+description = "A SOLID-based, full-compatibility Python port of PJSIP"
+authors = [
+    { name = "Fujinami", email = "fujinami@example.com" }
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "structlog>=23.1.0",
+    "anyio>=4.0.0",
+]
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
